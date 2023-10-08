@@ -1,0 +1,267 @@
+/**---------------------------------------- */
+/**-------------  GENERALES  -------------- */
+/**---------------------------------------- */
+:root {
+    --dark-background: #131313;
+}
+
+html {
+    font-size: 70%;
+    font-family: 'Roboto Mono';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img.dinamic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    text-align: center;
+    /* align-content: center; */
+}
+
+/*---------------------------------------- */
+
+
+
+/**---------------------------------------- */
+/**------------  HEADER  ------------------ */
+/**---------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px 10px;
+    align-items: center;
+    background-color: var(--dark-background);
+    color: #ddd;
+    width: 100%;
+}
+
+header .img-container {
+    width: 75px;
+}
+
+header .nav-desktop {
+    display: none;
+    gap: 25px;
+    overflow: hidden;
+}
+
+header .nav-desktop li:hover {
+    color: yellow;
+}
+
+@media (width >=830px) {
+    header .nav-desktop {
+        display: flex;
+    }
+
+    footer ul.links {
+        flex-direction: row;
+        margin: 50px auto 25px;
+    }
+}
+
+/**---------------------------------------- */
+/**-------------  MAIN  ------------------- */
+/**---------------------------------------- */
+main .banner {
+    position: relative;
+    min-height: 100vh;
+
+}
+
+main .banner .img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main .banner .img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+}
+
+main .banner .info {
+    position: absolute;
+    min-width: 50vw;
+    z-index: 1;
+    /* right: 30px; */
+    bottom: 60px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    align-items: center;
+    margin: 10px;
+}
+
+main .banner .info .paragraph {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+main .banner .info .bg-transparent {
+    border: 1px solid #131313;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+main .banner .info .bg-green {
+    border: 1px solid #131313;
+    background: green;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/* _----------____-------------- */
+
+main .oradores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 25px;
+}
+
+main .oradores .card {
+    max-width: 400px;
+    min-width: 300px;
+    border: 1px solid #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main .oradores .card .img-container {
+    width: 100%;
+}
+
+main .oradores .card .about {
+    padding: 5px;
+}
+
+/* -----------------______------------ */
+
+main .place-meet {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-background);
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+main .place-meet .img-container {
+    max-height: 500px;
+}
+
+main .place-meet .about {
+    padding: 10px;
+    text-align: center;
+    /* margin: 5px; */
+}
+
+main .place-meet .about .summary {
+    text-align: start;
+    margin: 15px 8px;
+}
+
+main .place-meet .about .more {
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
+/*------------__-___---------  */
+
+main .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main .form-container .punteado {
+    border-bottom: .5px dashed;
+    /* color: red; */
+    padding: 0;
+}
+
+main .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5px 0;
+}
+
+main .form-container form input,
+main .form-container form textarea {
+    padding: 5px;
+}
+
+@media(width >=1000px) {
+    .card {
+        max-width: 350px;
+    }
+
+    .container-cards {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+
+/**---------------------------------------- */
+/**------------  FOOTER  ------------------ */
+/**---------------------------------------- */
+
+footer {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    /* flex-wrap: wrap; */
+}
+
+footer .links li {
+    padding: 3px 15px 0px;
+    border-bottom: transparent 2px solid;
+}
+
+footer .links li:hover {
+    border-bottom-color: #fff;
+}
